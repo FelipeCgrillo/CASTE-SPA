@@ -107,7 +107,7 @@ const WhatWeDo = () => {
   };
 
   return (
-    <section className="section bg-gray-50 py-20">
+    <section id="what-we-do" className="section bg-white py-20">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"

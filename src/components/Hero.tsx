@@ -9,6 +9,13 @@ const Hero = () => {
   const opacity = useTransform(scrollY, [0, 300, 500], [1, 0.5, 0]);
   const scale = useTransform(scrollY, [0, 500], [1, 1.15]);
 
+  const handleScrollToWhatWeDo = () => {
+    const whatWeDoSection = document.querySelector('#what-we-do');
+    if (whatWeDoSection) {
+      whatWeDoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section relative h-screen flex justify-center items-center overflow-hidden">
       <motion.div 
@@ -54,7 +61,12 @@ const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
         >
-          <button className="btn-primary">Conoce más</button>
+          <button 
+            className="btn-primary"
+            onClick={handleScrollToWhatWeDo}
+          >
+            Conoce más
+          </button>
         </motion.div>
       </motion.div>
     </section>
