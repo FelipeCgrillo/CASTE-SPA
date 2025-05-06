@@ -74,7 +74,7 @@ const FeatureCard = ({ title, description, icon, delay, index }: { title: string
 const WhatWeDo = () => {
   const features = [
     {
-      title: "Automatización con n8n",
+      title: "Automatización",
       description: "Creamos flujos de trabajo personalizados que automatizan procesos repetitivos y complejos.",
       icon: "⚙️",
     },

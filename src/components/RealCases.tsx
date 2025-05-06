@@ -69,7 +69,7 @@ const RealCases = () => {
 
   const cases = [
     {
-      title: "UAF – Unidad de Análisis Financiero",
+      title: "Ejército de Chile – Automatización de flujos",
       description: "Implementamos un sistema de automatización de flujos de información para mejorar la capacidad analítica y la detección de operaciones sospechosas.",
       image: "/images/uaf.jpg"
     },
