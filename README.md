@@ -74,4 +74,4 @@ El sitio está configurado para ser desplegado en Vercel. Simplemente conecte su
 ## Contacto
 
 Para cualquier consulta sobre este proyecto, contactar a:
-- Felipe Carrasco - felipe.carrasco@castespa.cl 
+- Felipe Carrasco - felipe.carrasco@inversionescaste.cl 

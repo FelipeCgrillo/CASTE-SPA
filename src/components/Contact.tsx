@@ -39,8 +39,8 @@ const Contact = () => {
               
               <p className="text-gray-700 flex items-center">
                 <span className="mr-2">📧</span>
-                <a href="mailto:felipe.carrasco@castespa.cl" className="hover:text-primary transition-colors">
-                  felipe.carrasco@castespa.cl
+                <a href="mailto:felipe.carrasco@inversionescaste.cl" className="hover:text-primary transition-colors">
+                  felipe.carrasco@inversionescaste.cl
                 </a>
               </p>
               
