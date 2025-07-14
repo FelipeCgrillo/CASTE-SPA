@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import '../styles/globals.css';
+import Sidebar from '../components/Sidebar';
 
 export const metadata: Metadata = {
   title: 'CASTE SPA - Servicios Integrales de Informática',
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <Sidebar />
         {children}
       </body>
     </html>

@@ -74,8 +74,13 @@ const FeatureCard = ({ title, description, icon, delay, index }: { title: string
 const WhatWeDo = () => {
   const features = [
     {
+      title: "Desarrollo Web",
+      description: "Creamos sitios web modernos, responsivos y optimizados con las últimas tecnologías como Next.js, React y Tailwind CSS.",
+      icon: "💻",
+    },
+    {
       title: "Automatización",
-      description: "Creamos flujos de trabajo personalizados que automatizan procesos repetitivos y complejos.",
+      description: "Desarrollamos flujos de trabajo personalizados que automatizan procesos repetitivos y complejos.",
       icon: "⚙️",
     },
     {
@@ -87,11 +92,6 @@ const WhatWeDo = () => {
       title: "Integraciones",
       description: "Conectamos plataformas públicas y privadas para crear ecosistemas digitales eficientes.",
       icon: "🔄",
-    },
-    {
-      title: "Flujos personalizados",
-      description: "Diseñamos soluciones a medida, rápidas y sin fricciones para cada cliente.",
-      icon: "🧩",
     }
   ];
 

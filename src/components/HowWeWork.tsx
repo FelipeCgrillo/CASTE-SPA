@@ -109,7 +109,7 @@ const HowWeWork = () => {
   };
 
   return (
-    <section className="section bg-gray-50 py-20">
+    <section id="how-we-work" className="section bg-gray-50 py-20">
       <motion.div 
         className="container mx-auto px-4"
         style={{ opacity, y: translateY }}

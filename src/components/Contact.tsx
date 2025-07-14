@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="section bg-white py-20">
+    <section id="contact" className="section bg-white py-20">
       <motion.div 
         className="container mx-auto px-4"
         style={{ scale, opacity, y }}

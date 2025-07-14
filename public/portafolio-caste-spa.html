@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASTE SPA - Portafolio de Proyectos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 3px solid #0077B6;
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0077B6;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 0.9em;
+            color: #888;
+            font-style: italic;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            border-left: 4px solid #0077B6;
+        }
+
+        .intro h2 {
+            color: #0077B6;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .intro p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .service {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .service h3 {
+            color: #0077B6;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .service p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .project {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #0077B6, #005a8b);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .project-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-type {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .project-content {
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            padding: 25px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .project-description {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .project-features {
+            margin-bottom: 20px;
+        }
+
+        .project-features h4 {
+            color: #0077B6;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border-left: 3px solid #0077B6;
+        }
+
+        .project-tech {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .project-tech h4 {
+            color: #0077B6;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .tech-list {
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        .contact {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #0077B6;
+            margin-top: 50px;
+        }
+
+        .contact h2 {
+            color: #0077B6;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .contact-item h4 {
+            color: #0077B6;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .contact-item p {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #888;
+            font-size: 0.8em;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .download-btn {
+            background: #0077B6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #005a8b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+        }
+
+        @media print {
+            body {
+                font-size: 12px;
+            }
+            .container {
+                max-width: none;
+                padding: 20px;
+            }
+            .project {
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+            }
+            .contact {
+                page-break-inside: avoid;
+            }
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">CASTE SPA</div>
+            <div class="subtitle">Portafolio de Proyectos</div>
+            <div class="tagline">Soluciones Tecnológicas Innovadoras desde la Patagonia</div>
+            <button class="download-btn" onclick="downloadPDF()">📄 Descargar como PDF</button>
+        </div>
+
+        <!-- Introducción -->
+        <div class="intro">
+            <h2>Acerca de CASTE SPA</h2>
+            <p>Somos una empresa tecnológica chilena especializada en automatización, integración y análisis de datos. Desde una de las regiones más australes del mundo, desarrollamos soluciones centradas en optimizar procesos, mejorar la experiencia de usuario y facilitar la transformación digital de organizaciones públicas y privadas.</p>
+            <p>Nuestro enfoque se basa en crear sistemas modulares de alta adaptabilidad, incorporando inteligencia artificial para potenciar el análisis de datos y implementando los más altos estándares de seguridad para proteger información sensible.</p>
+        </div>
+
+        <!-- Servicios -->
+        <div class="services">
+            <div class="service">
+                <h3>Desarrollo Web</h3>
+                <p>Sitios web modernos, responsivos y optimizados con tecnologías como Next.js, React y Tailwind CSS</p>
+            </div>
+            <div class="service">
+                <h3>Automatización</h3>
+                <p>Flujos de trabajo personalizados que automatizan procesos repetitivos y complejos</p>
+            </div>
+            <div class="service">
+                <h3>Visualización Power BI</h3>
+                <p>Dashboards visuales e interactivos para toma de decisiones efectiva</p>
+            </div>
+            <div class="service">
+                <h3>Integraciones</h3>
+                <p>Conexión de plataformas públicas y privadas en ecosistemas digitales eficientes</p>
+            </div>
+        </div>
+
+        <!-- Proyectos -->
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">AysénTransfer</div>
+                <div class="project-type">Plataforma de Reservas de Transporte</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/aysen-transfer.jpg" alt="AysénTransfer - Plataforma de Reservas" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Plataforma de reservas de transporte desde y hacia el Aeropuerto de Balmaceda, diseñada para conectar turistas y empresas locales de transporte en la región de Aysén. La solución integra múltiples funcionalidades para optimizar la experiencia tanto de usuarios como de operadores de transporte.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Calendario de disponibilidad en tiempo real</div>
+                        <div class="feature">Sistema de pagos en línea seguro</div>
+                        <div class="feature">Plataforma bilingüe (inglés-español)</div>
+                        <div class="feature">Seguimiento de servicios en tiempo real</div>
+                        <div class="feature">Sistema de verificación de conductores</div>
+                        <div class="feature">Gestión de reservas automatizada</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Desarrollo web responsivo, integración de APIs de pago, sistema de geolocalización, base de datos en tiempo real, autenticación segura</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Conecta Austral</div>
+                <div class="project-type">Sitio Comercial para Conectividad Satelital</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/conecta-austral.jpg" alt="Conecta Austral - Conectividad Satelital" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Sitio comercial especializado en el arriendo de kits Starlink vehiculares, orientado a instituciones públicas y privadas que requieren conectividad confiable en zonas remotas de la Patagonia. La plataforma facilita el acceso a tecnología de conectividad satelital de última generación.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Brochure digital descargable</div>
+                        <div class="feature">Sistema de cotización rápida</div>
+                        <div class="feature">Compatibilidad con compra pública</div>
+                        <div class="feature">Catálogo de equipos disponibles</div>
+                        <div class="feature">Información técnica detallada</div>
+                        <div class="feature">Soporte para licitaciones</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Diseño web corporativo, sistema de cotización automatizado, integración con procesos de compra pública, generación de documentos PDF</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Symptomatix AI</div>
+                <div class="project-type">Asistente de Triage Médico con Inteligencia Artificial</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/symptomatix-ai.jpg" alt="Symptomatix AI - Asistente Médico IA" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Innovador asistente de triage médico que utiliza inteligencia artificial para permitir a los pacientes describir síntomas vía WhatsApp y recibir recomendaciones clínicas personalizadas. El sistema integra análisis de texto avanzado con bases de datos médicas para proporcionar orientación inicial precisa.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Interfaz conversacional vía WhatsApp</div>
+                        <div class="feature">Análisis de síntomas con IA</div>
+                        <div class="feature">Recomendaciones clínicas personalizadas</div>
+                        <div class="feature">Integración con MongoDB</div>
+                        <div class="feature">Tecnología OpenAI</div>
+                        <div class="feature">Sistema de agendamiento por especialidad</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Inteligencia Artificial (OpenAI), MongoDB, API de WhatsApp, procesamiento de lenguaje natural, sistema de agendamiento por comuna y especialidad médica</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">CASTE SPA - Sistema de Gestión de Compras</div>
+                <div class="project-type">Plataforma Interna de Gestión Empresarial</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/sistema-compras.jpg" alt="Sistema de Gestión de Compras CASTE SPA" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Plataforma interna desarrollada en Streamlit para la gestión integral de solicitudes de compra. El sistema permite crear, seguir y aprobar solicitudes a través de un flujo estructurado que involucra múltiples unidades organizacionales, optimizando los procesos internos y mejorando la trazabilidad.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Creación de solicitudes de compra</div>
+                        <div class="feature">Flujo de aprobación multi-nivel</div>
+                        <div class="feature">Seguimiento por unidad requirente</div>
+                        <div class="feature">Validación financiera automatizada</div>
+                        <div class="feature">Control de versiones completo</div>
+                        <div class="feature">Historial de aprobaciones</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Streamlit, Python, sistema de alertas automatizadas, control de versiones, flujos de aprobación, integración con finanzas y adquisiciones</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Viña Doña Aurora</div>
+                <div class="project-type">Sitio Institucional para Empresa Vitivinícola</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/vina-aurora.jpg" alt="Viña Doña Aurora - Sitio Institucional" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Sitio institucional desarrollado para una pequeña viña en etapa de desarrollo, enfocado en crear una sólida identidad visual y contar la historia de la marca de manera inmersiva. El proyecto establece las bases digitales para futuras expansiones comerciales.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Identidad visual corporativa</div>
+                        <div class="feature">Narrativa de marca inmersiva</div>
+                        <div class="feature">Diseño responsivo elegante</div>
+                        <div class="feature">Galería de productos</div>
+                        <div class="feature">Historia de la empresa</div>
+                        <div class="feature">Preparado para e-commerce futuro</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Diseño web responsivo, sistema de gestión de contenido, optimización SEO, preparación para integraciones e-commerce y catálogos digitales</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <div class="project-title">Unidad de Análisis Financiero (UAF)</div>
+                <div class="project-type">Tableros y Automatización de Procesos</div>
+            </div>
+            <div class="project-content">
+                <img src="/images/uaf-tableros.jpg" alt="UAF - Tableros y Automatización" class="project-image" onerror="this.style.display='none'">
+                <div class="project-description">
+                    Proyecto integral de automatización de flujos para la solicitud de información y publicación de tableros de control para la Unidad de Análisis Financiero. La solución implementa tecnologías Microsoft 365 y Power BI para crear un ecosistema de inteligencia de negocios robusto y seguro.
+                </div>
+                <div class="project-features">
+                    <h4>Características Principales:</h4>
+                    <div class="features-grid">
+                        <div class="feature">Automatización de flujos de información</div>
+                        <div class="feature">Tableros Power BI interactivos</div>
+                        <div class="feature">Generación automática de reportes</div>
+                        <div class="feature">Flujos de aprobación seguros</div>
+                        <div class="feature">Publicación segura de dashboards</div>
+                        <div class="feature">Indicadores financieros estratégicos</div>
+                    </div>
+                </div>
+                <div class="project-tech">
+                    <h4>Tecnologías Implementadas:</h4>
+                    <div class="tech-list">Microsoft 365, Power BI, automatización de flujos, integración de sistemas, seguridad de datos, visualización avanzada de indicadores financieros</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacto -->
+        <div class="contact">
+            <h2>Contacto</h2>
+            <p>Para más información sobre nuestros servicios y cómo podemos ayudar a su organización, no dude en contactarnos.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Contacto Principal</h4>
+                    <p><strong>Felipe Carrasco Grillo</strong><br>
+                    Fundador y Consultor Principal</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p>felipe.carrasco@inversionescaste.cl</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Ubicación</h4>
+                    <p>Aysén, Chile<br>
+                    Patagonia Chilena</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 CASTE SPA - Todos los derechos reservados | Automatizamos procesos públicos y privados desde la Patagonia</p>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            // Ocultar el botón antes de imprimir
+            const downloadBtn = document.querySelector('.download-btn');
+            downloadBtn.style.display = 'none';
+            
+            // Configurar la impresión
+            const originalTitle = document.title;
+            document.title = 'CASTE_SPA_Portafolio_Proyectos';
+            
+            // Abrir diálogo de impresión
+            window.print();
+            
+            // Restaurar el botón después de un momento
+            setTimeout(() => {
+                downloadBtn.style.display = 'block';
+                document.title = originalTitle;
+            }, 1000);
+        }
+
+        // También agregar función para Ctrl+P
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'p') {
+                e.preventDefault();
+                downloadPDF();
+            }
+        });
+    </script>
+</body>
+</html> 
